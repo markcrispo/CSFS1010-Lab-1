@@ -1,4 +1,13 @@
-## CFS1010 Lab 1
+## Installation:
+
+```
+git clone https://github.com/markcrispo/CSFS1010-Lab-1
+cd CSFS1010-Lab-1
+npm i
+npm run dev
+```
+
+# CFS1010 Lab 1
 
 You've been hired to code a To Do list app! We'll build it step-by-step.
 
@@ -6,10 +15,17 @@ You've been hired to code a To Do list app! We'll build it step-by-step.
 
 Create a component called `ToDoItem` that renders a checkbox and a text field. The component should track its state with the [useState hook](https://react.dev/reference/react/useState). This is an example of a common pattern - a [controlled component](https://codedamn.com/news/reactjs/what-are-controlled-and-uncontrolled-components-in-react)!
 
+The goal is to drive the inputs with state variables.
+
+```
+const [title, setTitle] = useState('');
+const [isChecked, setIsChecked] = useState(false);
+```
+
 _Hints:_
 
 - You can use `<input type="checkbox" />` and `<input type="text" />` for the checkbox and textfield
-- Use the `onChange` prop to capture [change events](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event) and call `setState`
+- Use the `onChange` prop to capture [change events](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event) and call `setTitle` and `setIsChecked`
 
 ## Step 2 - Save/Edit
 
@@ -24,8 +40,7 @@ _When the user clicks Edit..._
 
 - the Save button should reappear
 - the text should be editable again.
-
-Make sure to disable the Save button when the text field is empty!
+- the Save button should be disabled when the text field is empty
 
 ## Step 3 - Hover Effects!
 
