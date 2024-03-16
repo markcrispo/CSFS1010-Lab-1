@@ -1,10 +1,15 @@
 import "./App.css";
 
+import ToDoItem from "./ToDoItem";
+
 const App = () => {
   return (
     <div>
       <h4>Task Tracker</h4>
-      {/* Add the ToDoItem component here */}
+
+      <ToDoItem />
+      <ToDoItem />
+      <ToDoItem />
     </div>
   );
 };
